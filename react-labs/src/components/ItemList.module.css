@@ -1,0 +1,17 @@
+.list {
+  display: grid;
+  list-style: none;
+  grid-template-rows: repeat(5, auto);
+  grid-auto-flow: column; 
+  gap: 10px;
+  background-color: rgb(198, 255, 219);
+  padding: 10px;
+}
+
+
+.item { 
+    padding: 10px 12px; 
+    border: 1px solid #aaaaaa; 
+    border-radius: 10px; 
+    margin-bottom: 8px; 
+}
