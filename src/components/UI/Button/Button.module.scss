@@ -1,0 +1,40 @@
+.btn {
+  width: var(--btn-w, 80px);
+  height: var(--btn-h, 40px);
+  border-radius: var(--btn-radius, 12px);
+  padding: 0;
+  border: none;
+  position: relative;
+  overflow: hidden;
+  line-height: 0;
+  box-sizing: border-box;
+
+  background: var(--btn-bg, transparent);
+
+  transition:
+    color .2s ease,
+    transform .12s ease,
+    box-shadow .2s ease,
+    filter .2s ease;
+}
+
+.icon {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: var(--icon-fit, cover);
+  border-radius: inherit;
+  transition: filter 1.5s ease, transform 1.1s ease;
+}
+
+.btn:hover {
+  outline: 2px solid var(--btn-outline, rgb(0, 255, 255));
+  cursor: pointer;
+}
+
+.btn:hover .icon {
+  filter: var(--icon-hover-filter, hue-rotate(2deg) saturate(1.2) brightness(1.1));
+  transform: var(--icon-hover-transform, scale(1.17));
+}
