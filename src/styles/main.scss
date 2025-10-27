@@ -1,0 +1,23 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+@import './variables';
+@import './mixins';
+@import './reset';
+
+html, body, #root {
+  height: 100%;
+  background:rgb(255, 255, 255); 
+}
+
+
+body {
+  margin: 0; 
+  font-family: $font-main;
+}
+
+.container {
+  max-width: $max-width;
+  margin-inline: auto;
+  padding-inline: 16px;
+}
+
+

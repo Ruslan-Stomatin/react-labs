@@ -1,0 +1,153 @@
+@import '../../styles/variables';
+
+.hero {
+    position: relative;
+    overflow: hidden;
+    padding: 56px 0 24px;
+
+
+    --h: clamp(820px, 56vw, 820px); 
+    --c1: 88%;  
+    --c2x: 9%; 
+    --c3: 2%;  
+}
+
+
+.hero::before {
+    content: "";
+    position: absolute;
+    inset: 0 auto auto 0;
+    width: 100%;
+    height: var(--h);
+    background: rgba(245, 251, 252, 1); 
+    z-index: 0;
+    pointer-events: none;
+
+
+    clip-path: polygon(
+    0 0,          
+    100% 0,       
+    100% var(--c1),
+    var(--c2x) 45%,
+    0 var(--c3)
+    );
+
+    filter: drop-shadow(0 20px 60px rgba(0,0,0,.06));
+}
+
+
+.row {
+    display: flex;
+    justify-content: space-between; 
+    align-items: center;            
+    width: $max-width;
+    position: relative;
+    z-index: 1;
+    max-height: 580px;  
+    margin-bottom: 100px;              
+}
+
+
+.right {
+  display: flex;
+  justify-content: flex-end; 
+  align-items: center;
+  max-width: 600px;
+}
+
+.right img {
+  width: min(100%, 580px);   
+  height: auto;             
+  border-radius: 24px;      
+  object-fit: cover;       
+  transition: transform 0.9s ease;
+
+
+  &:hover {
+    transform: scale(1.07) translateY(-15px);
+    
+  }
+}
+
+.left {
+    display: flex;
+    justify-content: flex-start; 
+    flex-direction: column;
+    max-width: 600px;
+
+    .title {
+        font-size: 60px;
+        margin-bottom: 0.2em;
+    }
+
+    .accent {
+    color: rgba(53, 184, 190, 1);
+    } 
+
+    .accent:hover {
+        cursor: pointer;
+        color: rgb(103, 222, 228);
+    }
+
+    .subtitle {
+        color: rgba(84, 98, 133, 1);
+        font-size: 18px;
+        margin-bottom: 50px;
+    }
+
+    .Home_button {
+        --btn-w: 193px;
+        --btn-h: 60px;
+        --btn-radius: 6px;
+        position: relative;
+    }
+
+    .btnText {
+        width: 96%;
+        height: 56%;
+        margin: auto;
+        position: absolute;
+        font-size: 17px;
+        color: rgba(255, 255, 255, 1);
+    }
+
+
+    
+.rating {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 4px; 
+  line-height: 2.3;
+
+
+  .star {
+    color: rgba(0, 182, 122, 1);
+    font-size: 18px;
+    margin-right: 6px;
+  }
+
+  .trust {
+    color: rgba(0, 0, 0, 1);
+    font-weight: 700;
+  }
+
+
+.rating_description {
+    display: inline-block;
+    vertical-align: middle;
+  }
+
+  .score {
+    font-size: 16px;
+    color: rgba(0, 0, 0, 1);
+    line-height: 0.4;
+
+    .highlight {
+      color: rgba(53, 184, 190, 1);
+      font-weight: 600;
+    }
+  }
+}
+    
+}
