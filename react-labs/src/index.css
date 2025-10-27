@@ -1,0 +1,19 @@
+/* Растягиваем корень на всю высоту окна */
+html, body, #root {
+  height: 100%;
+}
+
+/* Убираем отступы и задаём тёмную тему */
+body {
+  margin: 0;
+  background: #000000e4;   /* тёмно-синий/почти чёрный */
+  font-family: Arial, sans-serif;
+}
+
+/* Центрируем всё, что рендерится внутри App */
+#root {
+  display: flex;
+  align-items: center;     /* по вертикали */
+  justify-content: center; /* по горизонтали */
+}
+
