@@ -1,0 +1,162 @@
+@import '../../styles/variables';
+
+.footer {
+  position: relative;
+  padding: 78px 0 68px;
+  max-height: 593px;
+  background: rgba(245, 251, 252, 1);
+  overflow: hidden;
+  isolation: isolate;
+}
+
+
+.bg {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+  background-image: var(--footer-bg);
+  background-repeat: no-repeat;
+  background-size: $max-width auto;
+  background-position: right 150px bottom -50px;
+  opacity: .45;
+  filter: saturate(0.7);
+}
+
+
+.top {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  grid-template-columns: 1.1fr 2fr;
+  gap: 348px;
+  align-items: start;
+}
+
+
+.brand {
+  display: grid;
+  gap: 12px;
+}
+
+.logo {
+  width: 40px;
+  height: 51px;
+}
+
+.desc {
+  color: rgba(84, 98, 133, 1);
+  line-height: 1.6;
+  max-width: 28ch;
+  font-size: 16px;
+  font-weight: 400;
+}
+
+.cols {
+  display: flex; 
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-top: 6px; 
+}
+
+.col {
+  display: flex;
+  flex-direction: column;
+  gap: 12px; 
+  min-width: 140px;
+
+  .head {
+    font-size: 12px;
+    letter-spacing: 0.12em;
+    font-weight: 400;
+    color: rgba(8, 9, 10, 1); 
+    text-transform: uppercase;
+    margin-bottom: 8px; 
+  }
+
+  a {
+    color: rgba(84, 98, 133, 1);
+    text-decoration: none;
+    font-size: 15px;
+    line-height: 1.7;
+    transition: color 0.2s ease;
+    font-weight: 400;
+
+    &:hover {
+      color: rgba(84, 98, 133, 0.614);
+    }
+  }
+}
+
+
+.bottom {
+  position: relative;
+  z-index: 1;
+  margin-top: 96px;
+  padding-top: 18px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  justify-content: space-between;
+
+  &::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: -20px;
+    height: 1px;
+    background: rgba(126, 130, 143, 0.09);
+  }
+}
+
+.copy {
+  color: rgba(53, 52, 72, 1);
+  font-size: 15px;
+
+  a {
+    color: rgba(53, 184, 190, 1);
+    text-decoration: none;
+  }
+}
+
+.social {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 16px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+
+  a {
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgb(241, 249, 250); 
+    border: 1.5px solid rgba(0, 0, 0, 0.08);
+    text-decoration: none;
+    transition: all 0.25s ease;
+
+    img {
+      width: 22px; 
+      height: 22px;
+      opacity: 0.75;
+      transition: opacity 0.25s ease, transform 0.25s ease;
+    }
+
+    &:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+
+      img {
+        opacity: 1;
+        transform: scale(1.08);
+      }
+    }
+  }
+}
+
