@@ -4,11 +4,9 @@ import Layout from '@/components/Layout/Layout';
 
 function HomePage() {
     return (
-        <>
         <Layout> 
           <Hero />
         </Layout>
-        </>
     );
 }
 

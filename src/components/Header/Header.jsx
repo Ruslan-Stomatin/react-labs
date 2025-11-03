@@ -1,7 +1,6 @@
 import s from './Header.module.scss'
-import Logo from '@/assets/icons/logo_app.svg'
-import Button from '../UI/Button/Button';
-import CartIcon from '@/assets/icons/Cart.svg'
+import Logo from '../Brand/Logo/Logo';
+import CartButton from '../Cart/CartButton';
 
 function Header() {
     return (
@@ -10,9 +9,7 @@ function Header() {
 
              <div className={s.row}>
 
-            <a href='/' className={s.logo}>
-            <img src={Logo} alt='Company Logo'></img>
-            </a>
+                <Logo />
 
                 <div className={s.header_menu}>
             <nav className={s.navigation}>
@@ -22,11 +19,8 @@ function Header() {
                 <a href='/login' className={s.link}>Login</a>
             </nav>
 
-            <div className={s.cartWrap}>
-            <Button className={s.big} >
-                 <img src={CartIcon} alt="" className={s.cart} aria-hidden />
-            </Button>
-            </div>
+
+            <CartButton></CartButton>
 
                 </div>
 

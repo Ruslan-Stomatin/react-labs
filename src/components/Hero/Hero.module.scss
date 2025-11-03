@@ -1,10 +1,9 @@
-@import '../../styles/variables';
+@use "@/styles" as s;
 
 .hero {
     position: relative;
     overflow: hidden;
     padding: 56px 0 24px;
-
 
     --h: clamp(820px, 56vw, 820px); 
     --c1: 88%;  
@@ -19,7 +18,7 @@
     inset: 0 auto auto 0;
     width: 100%;
     height: var(--h);
-    background: rgba(245, 251, 252, 1); 
+    background: s.$bagraund-second; 
     z-index: 0;
     pointer-events: none;
 
@@ -31,8 +30,6 @@
     var(--c2x) 45%,
     0 var(--c3)
     );
-
-    filter: drop-shadow(0 20px 60px rgba(0,0,0,.06));
 }
 
 
@@ -40,10 +37,9 @@
     display: flex;
     justify-content: space-between; 
     align-items: center;            
-    width: $max-width;
+    width: s.$max-width;
     position: relative;
     z-index: 1;
-    max-height: 580px;  
     margin-bottom: 100px;              
 }
 
@@ -52,7 +48,6 @@
   display: flex;
   justify-content: flex-end; 
   align-items: center;
-  max-width: 600px;
 }
 
 .right img {
@@ -73,25 +68,25 @@
     display: flex;
     justify-content: flex-start; 
     flex-direction: column;
-    max-width: 600px;
+    width: min(100%, 600px);
 
     .title {
-        font-size: 60px;
+        font-size: s.$h1-size;
         margin-bottom: 0.2em;
     }
 
     .accent {
-    color: rgba(53, 184, 190, 1);
+    color: s.$text-color-main-highlight;
     } 
 
     .accent:hover {
         cursor: pointer;
-        color: rgb(103, 222, 228);
+        color: #67dee4;
     }
 
     .subtitle {
-        color: rgba(84, 98, 133, 1);
-        font-size: 18px;
+        color: s.$descriptive-text-color;
+        font-size: s.$font-scale-large; 
         margin-bottom: 50px;
     }
 
@@ -104,11 +99,10 @@
 
     .btnText {
         width: 96%;
-        height: 56%;
         margin: auto;
         position: absolute;
-        font-size: 17px;
-        color: rgba(255, 255, 255, 1);
+        font-size: s.$font-scale-large;
+        color: s.$bagraund-main;
     }
 
 
@@ -118,18 +112,17 @@
   flex-direction: column;
   align-items: flex-start;
   gap: 4px; 
-  line-height: 2.3;
+  line-height: s.$line-height-base;
 
 
   .star {
-    color: rgba(0, 182, 122, 1);
-    font-size: 18px;
+    color: #00b67a;
+    font-size: s.$font-scale-large; 
     margin-right: 6px;
   }
 
   .trust {
-    color: rgba(0, 0, 0, 1);
-    font-weight: 700;
+    font-weight: s.$font-weight-bold; 
   }
 
 
@@ -139,13 +132,12 @@
   }
 
   .score {
-    font-size: 16px;
-    color: rgba(0, 0, 0, 1);
-    line-height: 0.4;
+    font-size: s.$font-scale-defult; 
+    line-height: s.$line-height-little;
 
     .highlight {
-      color: rgba(53, 184, 190, 1);
-      font-weight: 600;
+      color: s.$text-color-main-highlight;
+      font-weight: s.$font-weight-semibold;
     }
   }
 }

@@ -1,0 +1,47 @@
+@use "@/styles" as s;
+
+.big {
+  --btn-w: 55px;
+  --btn-h: 55px;
+  --btn-radius: 4px;
+  position: relative;
+
+  .cart {
+    position: absolute;
+    inset: 0;
+    width: 56%;
+    height: 56%;
+    margin: auto;
+    display: block;
+    object-fit: contain;
+    filter: none;
+    pointer-events: none;
+  }
+}
+
+.cartWrap {
+  position: relative;
+  display: inline-block;
+}
+
+.cartWrap::after {
+  content: "0";
+  position: absolute;
+  top: -6px;
+  right: -6px;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  background: s.$bagraund-main;
+  color: s.$text-color-main-highlight;
+
+  font-weight: s.$font-weight-semibold;
+  font-size: s.$font-scale-small;
+  
+  display: grid;
+  place-items: center;
+  z-index: 2;
+  box-shadow: 7px 7px 25px rgba(126, 130, 143, 0.18); // There are not single styles like project right now, however I must fix it later 
+  filter: drop-shadow(0 10px 25px rgba(0, 0, 0, 0.05));
+  pointer-events: none;
+}
