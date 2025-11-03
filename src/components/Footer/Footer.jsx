@@ -1,9 +1,10 @@
 import s from './Footer.module.scss'
 import BgrFooter from '@/assets/images/Delivery_footer.png'
-import Logo from '@/assets/icons/logo_app.svg'
 import Instagram from '@/assets/icons/Instagram.svg'
 import YouTube from '@/assets/icons/YouTube.svg'
 import Twitter from '@/assets/icons/Twitter.svg'
+import Logo from '@/components/Brand/Logo/Logo'
+import { footerCols } from '@/config/FooterNav'
 
 function Footer() {
     return (
@@ -12,37 +13,28 @@ function Footer() {
       <div className={s.bg} style={{ ['--footer-bg']: `url(${BgrFooter})` }} />
 
     <div className="container">
-
         <div className={s.top}>
           <div className={s.brand}>
-            <img src={Logo} alt="Company logo" className={s.logo} />
+            <Logo />
             <p className={s.desc}>
               Takeaway & Delivery template<br/>for small – medium businesses.
             </p>
           </div>
 
-          <nav className={s.cols}>
-            <div className={s.col}>
-              <h4 className={s.head}>Company</h4>
-              <a href="/home">Home</a>
-              <a href="/order">Order</a>
-              <a href="/faq">FAQ</a>
-              <a href="/contact">Contact</a>
-            </div>
-
-            <div className={s.col}>
-              <h4 className={s.head}>Template</h4>
-              <a href="/style-guide">Style Guide</a>
-              <a href="/changelog">Changelog</a>
-              <a href="/licence">Licence</a>
-              <a href="/university">Webflow University</a>
-            </div>
-
-            <div className={s.col}>
-              <h4 className={s.head}>Flowbase</h4>
-              <a href="/clonables">More Cloneables</a>
-            </div>
-          </nav>
+          <div className={s.cols}>
+            {footerCols.map((col) => (
+              <div key={col.title} className={s.col}>
+                <h4 className={s.head}>{col.title}</h4>
+                <nav>
+                  {col.links.map((link) => (
+                    <a key={link.to} href={link.to}>
+                      {link.label}
+                    </a>
+                  ))}
+                </nav>
+              </div>
+            ))}
+          </div>
         </div>
 
         <div className={s.bottom}>
