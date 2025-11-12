@@ -1,0 +1,19 @@
+@use "@/styles" as s;
+
+.rowBottom {
+  display: flex; 
+  gap: 10px;
+}
+
+.input {
+  flex: 0 1 50px;
+  padding: 12px 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: s.$font-scale-defult;
+  outline: none;
+  min-width: 0; 
+}
+.input:focus {
+  border-color: #888;
+}

@@ -1,0 +1,19 @@
+@use "@/styles" as s;
+
+.dinner {
+  display: inline-flex;
+  padding: 14px 34px;        
+  border: 1px solid #61728333; 
+  border-radius: 6px;
+  background: s.$bagraund-main; 
+  color: #222222;    
+  font-size: s.$font-scale-defult;
+  font-weight: s.$font-weight-regular;
+  line-height: 1;
+  transition: border-color .15s ease, box-shadow .15s ease, background .15s ease;
+
+  &:hover {
+    border-color: #c9d3db;
+    outline: none;;
+  }
+}
