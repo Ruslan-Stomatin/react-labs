@@ -1,0 +1,55 @@
+@use "@/styles" as s;
+
+.card {
+  display: grid;
+  grid-template-columns: 196px 1fr;
+  gap: 14px;
+  padding: 14px;
+  background: s.$bagraund-main;
+  border-radius: 10px;
+  box-shadow: 0 8px 24px #0000002e;
+
+  .pic {
+  border-radius: 4px;
+}
+}
+
+.body { 
+  display: grid;
+}
+
+.rowTop {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  align-items: start;
+  gap: 10px;
+}
+
+.title { 
+  font-weight: s.$font-weight-regular;
+}
+
+.price {
+  color: s.$text-color-main-highlight;
+  font-weight: s.$font-weight-regular;
+  font-size: s.$font-scale-defult;
+}
+.price span {
+  font-size: 11px;
+  opacity: .7;
+  margin-left: 4px;
+}
+
+.desc {
+  line-height: s.$line-height-pre-medium;
+  color: s.$descriptive-text-color;
+  font-size: s.$font-scale-defult;
+  font-weight: s.$font-weight-regular;
+}
+
+.rowBottom {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+

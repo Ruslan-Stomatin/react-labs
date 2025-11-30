@@ -1,7 +1,7 @@
 import BtnIcon from '@/assets/icons/btn.svg';
 import s from './Button.module.scss';
 
-export default function Button({ onClick, className, style, icon = BtnIcon, children }) {
+function Button({ onClick, className, style, icon = BtnIcon, children }) {
   return (
     <button
       type="button"
@@ -9,8 +9,10 @@ export default function Button({ onClick, className, style, icon = BtnIcon, chil
       style={style}
       onClick={onClick}
     >
-      <img src={icon} alt="icon" className={s.icon} />
+      {icon ? <img src={icon} alt="" aria-hidden className={s.icon} /> : null}
       {children}
     </button>
   );
 }
+
+export default Button;

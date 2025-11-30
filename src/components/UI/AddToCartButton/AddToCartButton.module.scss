@@ -1,0 +1,16 @@
+@use "@/styles" as s;
+
+.addToCart {
+  background: s.$bagraund-color-main-highlight;
+  border: none;
+  border-radius: 6px;
+  padding: 0.9em 2.3em;
+  color: s.$main-text-color;
+  transition: transform 0.5s ease;
+}
+
+
+.addToCart:hover {
+    transform: scale(1.07) translateY(-1px);
+    outline: none;
+}

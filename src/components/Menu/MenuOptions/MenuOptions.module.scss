@@ -1,0 +1,30 @@
+@use "@/styles" as s;
+
+.options {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    gap: 15px;
+    text-align: center;
+}
+
+.title {
+    font-size: s.$h1-size;
+    color: s.$text-color-main-highlight;
+}
+
+
+.text {
+    font-size: s.$font-scale-defult;
+    color: s.$descriptive-text-color;
+}
+
+.phone {
+    color: s.$text-color-main-highlight;
+}
+
+.tabs {
+    display: inline-flex;
+    gap: 30px;
+}

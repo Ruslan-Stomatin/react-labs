@@ -1,12 +1,15 @@
 .btn {
-  width: var(--btn-w, 80px);
-  height: var(--btn-h, 40px);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: var(--btn-w, auto);
+  height: var(--btn-h, auto);
   border-radius: var(--btn-radius, 12px);
-  padding: 0;
+  padding: var(--btn-py, 0.6em) var(--btn-px, 1em);
   border: none;
   position: relative;
   overflow: hidden;
-  line-height: 0;
+  line-height: 1;
   box-sizing: border-box;
 
   background: var(--btn-bg, transparent);
