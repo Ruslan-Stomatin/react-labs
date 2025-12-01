@@ -1,8 +1,8 @@
-import useNumberChange from '@/hooks/useNumberChange';
+import createNumberChangeHandler from '@/utils/numberChange';
 import s from './Input.module.scss';
 
 function Input({ value, onChange, min = 1 }) {
-  const handleChange = useNumberChange(min, onChange);
+  const handleChange = createNumberChangeHandler(min, onChange);
 
   return (
     <input
