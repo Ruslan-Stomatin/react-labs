@@ -21,8 +21,33 @@
 }
 
 .phone {
-    color: s.$text-color-main-highlight;
+  position: relative;
+  color: s.$text-color-main-highlight;
+  cursor: pointer;
 }
+
+.phone::after {
+  content: "+370 600 12345";
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: #3a3838cb;
+  padding: 6px 10px;
+  border-radius: 6px;
+  font-size: s.$font-scale-medium;
+  color: s.$main-text-color;
+  box-shadow: 0 2px 6px #00000026;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity .2s ease, transform .2s ease;
+  white-space: nowrap;
+}
+
+.phone:hover::after {
+  opacity: 1;
+  transform: translateY(0);
+}
+
 
 .tabs {
     display: inline-flex;

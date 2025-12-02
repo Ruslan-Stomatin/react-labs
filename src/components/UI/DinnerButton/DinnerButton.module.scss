@@ -14,6 +14,16 @@
 
   &:hover {
     border-color: #c9d3db;
-    outline: none;;
+    outline: none;
   }
+  
+}
+
+.active {
+  background-image: url("@/assets/icons/btn.svg"); 
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  border-color: transparent;
+  color: s.$main-text-color;
 }

@@ -1,5 +1,5 @@
 import Layout from '@/components/Layout/Layout';
-import MenuBody from '@/components/Menu/MenuBody'
+import MenuBody from '@/components/Menu/menuBody/MenuBody'
 
 function MenuPage() {
     return (

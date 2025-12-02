@@ -10,6 +10,8 @@
   font-weight: s.$font-weight-regular;
   line-height: 1;
   transition: border-color .15s ease, box-shadow .15s ease, background .15s ease;
+  background-color: s.$bagraund-main;
+  color: #000;
 
   &:hover {
     border-color: none;
@@ -17,10 +19,17 @@
   }
 }
 
+.active {
+  background-image: url("@/assets/icons/btn.svg"); 
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  border-color: transparent;
+  color: s.$main-text-color;
+}
+
 .btnText {
     position: absolute;
     width: 96%;
-    margin: auto;
-    color: s.$main-text-color; 
-
+    margin: auto; 
 }
