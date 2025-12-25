@@ -1,0 +1,45 @@
+@use "@/styles" as s;
+
+.cardOrder {
+    display: flex;
+    min-width: 180%;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+    background-color: s.$bagraund-main;
+    border-radius: 6px;
+    box-shadow: 0 8px 24px #0000002e;
+    padding: 14px;
+}
+
+.removeItem {
+    background-color: s.$bagraund-color-main-highlight;
+    border: none;
+    border-radius: 6px;
+    padding: 0.7em 1.3em;
+    color: s.$main-text-color;
+    transition: transform 0.5s ease;
+}
+
+.orderOptions {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 20px;
+}
+
+.mainOrderInfo {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    gap: 15px;
+}
+
+.img {
+    margin: 7px;
+}
+
+.price {
+    color: s.$text-color-main-highlight;
+}
