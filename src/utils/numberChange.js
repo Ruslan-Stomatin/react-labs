@@ -1,4 +1,4 @@
-function useNumberChange(min, externalOnChange) {
+function createNumberChangeHandler(min, externalOnChange) {
   return function (event) {
     const textValue = event.target.value;
     const numberValue = Number(textValue);
@@ -18,4 +18,4 @@ function useNumberChange(min, externalOnChange) {
   };
 }
 
-export default useNumberChange;
+export default createNumberChangeHandler;
