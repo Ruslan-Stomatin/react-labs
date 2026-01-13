@@ -8,8 +8,8 @@ import { CartCountProvider } from './store/CartContext'
 createRoot(document.getElementById('root')).render(
   <StrictMode>
     <CartCountProvider>
-          <MenuPage />
-    {/* <HomePage /> */}
+          {/* <MenuPage /> */}
+    <HomePage />
     </CartCountProvider>
   
   </StrictMode>,

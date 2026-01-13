@@ -1,9 +1,24 @@
+import { useEffect } from 'react';
+import { useFetch } from '@/hooks/useFetch';
 import s from './Hero.module.scss'
 import Commercial from '@/assets/images/Delivery_home.png'
 import HomeBtn from '@/components/UI/Button/Button'
 
 
 function Hero() {
+    const { sendRequest } = useFetch();
+
+    useEffect(() => {
+    const payload = {
+    page: 'home',
+    action: 'view',
+    };
+
+    sendRequest('/hw5/home-view', payload);
+}, [sendRequest]);
+
+
+
     return (
         <section className={s.hero}>
 
