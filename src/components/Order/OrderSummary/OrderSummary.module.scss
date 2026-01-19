@@ -1,0 +1,11 @@
+@use "@/styles" as s;
+
+.totalSum {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: s.$font-scale-xlarge;
+    font-weight: s.$font-weight-regular;
+    color: #3a3c3b;
+    margin: 30px;
+}

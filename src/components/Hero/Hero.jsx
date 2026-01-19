@@ -1,5 +1,6 @@
 import { useEffect } from 'react';
 import { useFetch } from '@/hooks/useFetch';
+import { Link } from "react-router-dom";
 import s from './Hero.module.scss'
 import Commercial from '@/assets/images/Delivery_home.png'
 import HomeBtn from '@/components/UI/Button/Button'
@@ -37,9 +38,11 @@ function Hero() {
               Lorem Ipsum has been the industry's standard dummy text ever since the 1500.
             </p>
 
+            <Link to="/order">
             <HomeBtn className={s.Home_button}>
                 <p className={s.btnText}>Place an Order</p>
             </HomeBtn>
+            </Link>
 
             <div className={s.rating}> 
                 <div className={s.rating_description}>

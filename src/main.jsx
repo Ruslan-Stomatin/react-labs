@@ -9,15 +9,17 @@ import OrderPage from "./pages/OrderPage/OrderPage";
 import LoginPageContainer from "./pages/LoginPage/LoginPageContainer";
 import PrivateRoute from "./auth/PrivateRoute";
 import { AuthProvider } from "./auth/AuthContext";
-import { CartCountProvider } from "./store/CartContext";
+
+import { Provider } from "react-redux";
+import { store } from "@/store/store";
 
 import "./styles/main.scss";
 
 createRoot(document.getElementById("root")).render(
   <StrictMode>
+    <Provider store={store}>
     <BrowserRouter>
       <AuthProvider>
-        <CartCountProvider>
           <Routes>
             <Route path="/" element={<HomePage />} />
             <Route path="/menu" element={<MenuPage />} />
@@ -30,10 +32,9 @@ createRoot(document.getElementById("root")).render(
                 </PrivateRoute>
               }
             />
-          </Routes>
-        </CartCountProvider>
+          </Routes>     
       </AuthProvider>
     </BrowserRouter>
+    </Provider>
   </StrictMode>
 );
-

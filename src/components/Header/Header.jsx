@@ -1,3 +1,4 @@
+import { NavLink } from "react-router-dom";
 import s from './Header.module.scss'
 import Logo from '../Brand/Logo/Logo';
 import CartButton from '../Cart/CartButton';
@@ -7,24 +8,42 @@ function Header() {
         <header className={s.header}>
             <div className='container'>
 
-             <div className={s.row}>
+            <div className={s.row}>
 
                 <Logo />
 
                 <div className={s.header_menu}>
-            <nav className={s.navigation}>
-                <a href='/' className={`${s.link} ${s.active}`}>Home</a>
-                <a href='/menu' className={s.link}>Menu</a>
-                <a href='/company' className={s.link}>Company</a>
-                <a href='/login' className={s.link}>Login</a>
-            </nav>
+        <nav className={s.navigation}>
+      <NavLink
+        to="/" className={({ isActive }) =>
+          `${s.link} ${isActive ? s.active : ""}`}>
+        Home
+      </NavLink>
 
+      <NavLink
+        to="/menu" className={({ isActive }) =>
+          `${s.link} ${isActive ? s.active : ""}`}>
+        Menu
+      </NavLink>
 
+      <NavLink
+        to="/company" className={({ isActive }) =>
+          `${s.link} ${isActive ? s.active : ""}`}>
+        Company
+      </NavLink>
+
+      <NavLink
+        to="/login" className={({ isActive }) =>
+          `${s.link} ${isActive ? s.active : ""}`}>
+        Login
+      </NavLink>
+    </nav>
+            
             <CartButton></CartButton>
 
                 </div>
 
-             </div>
+            </div>
 
             </div>
         </header>

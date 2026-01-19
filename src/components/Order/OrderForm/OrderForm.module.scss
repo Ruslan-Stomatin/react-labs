@@ -1,0 +1,34 @@
+@use "@/styles" as s;
+
+.orderForm {
+  display: grid;
+  grid-template-columns: 60px 340px;
+  gap: 16px;
+  align-items: center;
+  margin: 20px;
+}
+
+.label {
+  justify-self: end; 
+  font-size: s.$font-scale-large;
+}
+
+.input {
+  width: 100%;
+  background-color: #FAFAFA;
+  height: 40px;
+  padding: 0 14px;
+  border: 1px solid #e5e5e5;
+  border-radius: 6px;
+  outline: none;
+}
+
+.button {
+  grid-column: 2 / -1;  
+  justify-self: center; 
+  padding: 15px 44px;
+  border: none;
+  border-radius: 6px;
+  background: s.$bagraund-color-main-highlight;
+  color: s.$main-text-color;
+}
