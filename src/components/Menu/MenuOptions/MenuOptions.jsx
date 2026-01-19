@@ -31,4 +31,3 @@ export default function MenuOptions({ activeCategory, onChangeCategory }) {
       </div>
     </section>
   );
-}
