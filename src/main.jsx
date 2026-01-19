@@ -20,7 +20,6 @@ createRoot(document.getElementById("root")).render(
     <Provider store={store}>
     <BrowserRouter>
       <AuthProvider>
-        
           <Routes>
             <Route path="/" element={<HomePage />} />
             <Route path="/menu" element={<MenuPage />} />
@@ -33,8 +32,7 @@ createRoot(document.getElementById("root")).render(
                 </PrivateRoute>
               }
             />
-          </Routes>
-      
+          </Routes>     
       </AuthProvider>
     </BrowserRouter>
     </Provider>

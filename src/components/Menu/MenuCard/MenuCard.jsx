@@ -1,6 +1,5 @@
 import { useState } from "react";
 import { useDispatch } from "react-redux";
-
 import { addItem } from "@/store/cart/cartSlice";
 import AddToCartButton from "@/components/UI/AddToCartButton/AddToCartButton";
 import Input from "@/components/UI/Input/Input";
@@ -8,9 +7,11 @@ import s from "./MenuCard.module.scss";
 
 export default function MenuCard({ meal }) {
   const [qty, setQty] = useState(1);
-  const dispatch = useDispatch();
 
-  if (!meal) return null;
+const dispatch = useDispatch();
+
+
+if (!meal) return null;
 
   const title = meal.title || "Untitled meal";
   const image = meal.image || "https://picsum.photos/seed/meal/160/120";
@@ -20,7 +21,6 @@ export default function MenuCard({ meal }) {
   const handleAdd = () => {
     dispatch(addItem({ item: meal, qty }));
   };
-
 
   return (
     <div className={s.card}>
@@ -32,9 +32,7 @@ export default function MenuCard({ meal }) {
             ${price.toFixed(2)} <span>USD</span>
           </div>
         </div>
-
         <p className={s.desc}>{desc}</p>
-
         <div className={s.rowBottom}>
           <Input value={qty} onChange={setQty} min={1} />
           <AddToCartButton qty={qty} onAdd={handleAdd} />
