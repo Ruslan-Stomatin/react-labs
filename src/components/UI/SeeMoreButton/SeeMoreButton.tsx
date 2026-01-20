@@ -14,7 +14,11 @@ export default function SeeMoreButton({
   className = "",
 }: SeeMoreButtonProps) {
   return (
-    <Button onClick={onClick} icon={null} className={`${s.seeMore} ${className}`}>
+    <Button
+      onClick={onClick}
+      icon={null}
+      className={`${s.seeMoreButton} ${className}`}
+    >
       {children}
     </Button>
   );
