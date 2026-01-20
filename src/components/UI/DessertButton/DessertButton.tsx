@@ -1,4 +1,4 @@
-import { Children, type ReactNode } from "react";
+import type { ReactNode } from "react";
 import Button from "../Button/Button";
 import s from "./DessertButton.module.scss";
 
@@ -17,11 +17,13 @@ export default function DessertButton({
   className = "",
   ...props
 }: DessertButtonProps) {
-  const mergedClass = `${s.dessert} ${isActive ? s.active : ""} ${className}`;
+  const mergedClass = `${s.menuCategoryButton} ${
+    isActive ? s.menuCategoryButtonActive : ""
+  } ${className}`;
 
   return (
     <Button {...props} icon={null} className={mergedClass}>
-      <p className={s.btnText}>{children}</p>
+      <p className={s.menuCategoryButtonText}>{children}</p>
     </Button>
   );
 }

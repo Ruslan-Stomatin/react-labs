@@ -1,26 +1,25 @@
 @use "@/styles" as s;
 
-.dessert {
+.menuCategoryButton {
   display: inline-flex;
   position: relative;
-  padding: 24px 59px;        
-  border: 1px solid #61728333; 
-  border-radius: 6px;   
+  padding: 24px 59px;
+  border: 1px solid #61728333;
+  border-radius: 6px;
   font-size: s.$font-scale-defult;
   font-weight: s.$font-weight-regular;
   line-height: 1;
-  transition: border-color .15s ease, box-shadow .15s ease, background .15s ease;
+  transition: border-color 0.15s ease, box-shadow 0.15s ease, background 0.15s ease;
   background-color: s.$bagraund-main;
   color: #000;
 
   &:hover {
-    border-color: none;
-    outline: none;;
+    outline: none;
   }
 }
 
-.active {
-  background-image: url("@/assets/icons/btn.svg"); 
+.menuCategoryButtonActive {
+  background-image: url("@/assets/icons/btn.svg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -28,8 +27,8 @@
   color: s.$main-text-color;
 }
 
-.btnText {
-    position: absolute;
-    width: 96%;
-    margin: auto; 
+.menuCategoryButtonText {
+  position: absolute;
+  width: 96%;
+  margin: auto;
 }
