@@ -8,14 +8,12 @@ import HomeBtn from '@/components/UI/Button/Button'
 
 function Hero() {
     const { sendRequest } = useFetch();
-
   useEffect(() => {
     sendRequest("/hw5/home-view", {
       page: "home",
       action: "view",
     });
   }, [sendRequest]);
-
 
     return (
         <section className={s.hero}>
