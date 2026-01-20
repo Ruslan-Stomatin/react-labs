@@ -29,19 +29,20 @@ export default function MenuCard({ meal }: MenuCardProps) {
   };
 
   return (
-    <div className={s.card}>
-      <img className={s.pic} src={image} alt={title} />
-      <div className={s.body}>
-        <div className={s.rowTop}>
-          <h3 className={s.title}>{title}</h3>
-          <div className={s.price}>
+    <div className={s.menuCard}>
+      <img className={s.menuCardImage} src={image} alt={title} />
+
+      <div className={s.menuCardBody}>
+        <div className={s.menuCardHeader}>
+          <h3 className={s.menuCardTitle}>{title}</h3>
+          <div className={s.menuCardPrice}>
             ${price.toFixed(2)} <span>USD</span>
           </div>
         </div>
 
-        <p className={s.desc}>{desc}</p>
+        <p className={s.menuCardDesc}>{desc}</p>
 
-        <div className={s.rowBottom}>
+        <div className={s.menuCardActions}>
           <Input value={qty} onChange={setQty} min={1} />
           <AddToCartButton qty={qty} onAdd={handleAdd} />
         </div>
