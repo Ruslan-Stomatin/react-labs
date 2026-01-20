@@ -1,32 +1,31 @@
 @use "@/styles" as s;
 
-.options {
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    width: 100%;
-    gap: 15px;
-    text-align: center;
+.menuOptions {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  gap: 15px;
+  text-align: center;
 }
 
-.title {
-    font-size: s.$h1-size;
-    color: s.$text-color-main-highlight;
+.menuOptionsTitle {
+  font-size: s.$h1-size;
+  color: s.$text-color-main-highlight;
 }
 
-
-.text {
-    font-size: s.$font-scale-defult;
-    color: s.$descriptive-text-color;
+.menuOptionsText {
+  font-size: s.$font-scale-defult;
+  color: s.$descriptive-text-color;
 }
 
-.phone {
+.menuOptionsPhone {
   position: relative;
   color: s.$text-color-main-highlight;
   cursor: pointer;
 }
 
-.phone::after {
+.menuOptionsPhone::after {
   content: "+370 600 12345";
   position: absolute;
   top: 100%;
@@ -39,17 +38,16 @@
   box-shadow: 0 2px 6px #00000026;
   opacity: 0;
   pointer-events: none;
-  transition: opacity .2s ease, transform .2s ease;
+  transition: opacity 0.2s ease, transform 0.2s ease;
   white-space: nowrap;
 }
 
-.phone:hover::after {
+.menuOptionsPhone:hover::after {
   opacity: 1;
   transform: translateY(0);
 }
 
-
-.tabs {
-    display: inline-flex;
-    gap: 30px;
+.menuOptionsTabs {
+  display: inline-flex;
+  gap: 30px;
 }
