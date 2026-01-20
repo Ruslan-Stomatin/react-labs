@@ -9,14 +9,19 @@ export default function CartButton() {
   const count = useSelector(selectCartCount);
 
   return (
-    <div className={s.cartWrap}>
+    <div className={s.cartButton}>
       <Link to="/order">
-      <Button className={s.big}>
-        <img src={CartIcon} alt="" className={s.cart} aria-hidden />
-      </Button>
+        <Button className={s.cartButton__button}>
+          <img
+            src={CartIcon}
+            alt=""
+            className={s.cartButton__icon}
+            aria-hidden
+          />
+        </Button>
       </Link>
 
-      <span className={s.badge} aria-live="polite">
+      <span className={s.cartButton__badge} aria-live="polite">
         {count}
       </span>
     </div>
