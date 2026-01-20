@@ -1,6 +1,6 @@
 @use "@/styles" as s;
 
-.addToCart {
+.addToCartButton {
   background: s.$bagraund-color-main-highlight;
   border: none;
   border-radius: 6px;
@@ -9,8 +9,7 @@
   transition: transform 0.5s ease;
 }
 
-
-.addToCart:hover {
-    transform: scale(1.07) translateY(-1px);
-    outline: none;
+.addToCartButton:hover {
+  transform: scale(1.07) translateY(-1px);
+  outline: none;
 }

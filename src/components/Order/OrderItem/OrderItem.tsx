@@ -14,14 +14,19 @@ export default function OrderItem({ item }: OrderItemProps) {
   const dispatch = useDispatch<AppDispatch>();
 
   return (
-    <div className={s.cardOrder}>
-      <div className={s.mainOrderInfo}>
-        <img className={s.img} src={item.image} width={100} alt={item.title} />
+    <div className={s.orderItem}>
+      <div className={s.orderItemInfo}>
+        <img
+          className={s.orderItemImage}
+          src={item.image}
+          width={100}
+          alt={item.title}
+        />
         <a>{item.title}</a>
       </div>
 
-      <div className={s.orderOptions}>
-        <span className={s.price}>${item.price}</span>
+      <div className={s.orderItemActions}>
+        <span className={s.orderItemPrice}>${item.price}</span>
 
         <Input
           className={s.qty}
@@ -31,9 +36,9 @@ export default function OrderItem({ item }: OrderItemProps) {
           }
         />
 
-        {/* Temporary solution */}
+        {/* @TODO: Temporary solution */}
         <button
-          className={s.removeItem}
+          className={s.orderItemRemove}
           onClick={() => dispatch(removeItem(item.id))}
         >
           X

@@ -1,28 +1,28 @@
 @use "@/styles" as s;
 
-.breakfast {
+.menuCategoryButton {
   display: inline-flex;
-  padding: 14px 24px;        
-  border: 1px solid #61728333; 
+  padding: 14px 24px;
+  border: 1px solid #61728333;
   border-radius: 6px;
-  background: s.$bagraund-main; 
-  color: #222222;    
+  background: s.$bagraund-main;
+  color: #222222;
   font-size: s.$font-scale-defult;
   font-weight: s.$font-weight-regular;
   line-height: 1;
-  transition: border-color .15s ease, box-shadow .15s ease, background .15s ease;
+  transition: border-color 0.15s ease, box-shadow 0.15s ease, background 0.15s ease;
 
   &:hover {
     border-color: #c9d3db;
-    outline: none;;
+    outline: none;
   }
 }
 
-.active {
-  background-image: url("@/assets/icons/btn.svg"); 
+.menuCategoryButtonActive {
+  background-image: url("@/assets/icons/btn.svg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
   border-color: transparent;
-  color: s.$main-text-color
+  color: s.$main-text-color;
 }

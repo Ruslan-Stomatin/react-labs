@@ -9,9 +9,9 @@ export default function OrderList() {
   const items = useSelector((state: RootState) => selectCartItems(state));
 
   return (
-    <div className={s.list}>
+    <div className={s.orderList}>
       {!items.length ? (
-        <p className={s.empty}>Your cart is empty</p>
+        <p className={s.orderListEmpty}>Your cart is empty</p>
       ) : (
         items.map((item) => <OrderItem key={item.id} item={item} />)
       )}

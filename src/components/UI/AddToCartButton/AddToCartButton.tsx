@@ -19,9 +19,10 @@ export default function AddToCartButton({
     <Button
       onClick={() => onAdd?.(qty)}
       icon={null}
-      className={`${s.addToCart} ${className}`}
+      className={`${s.addToCartButton} ${className}`}
     >
       {children}
     </Button>
   );
 }
+

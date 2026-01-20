@@ -18,7 +18,7 @@ export default function Input({
 
   return (
     <input
-      className={`${s.input} ${className}`}
+      className={`${s.uiInput} ${className}`}
       type="number"
       min={min}
       value={value}

@@ -41,16 +41,20 @@ export default function MenuBody() {
     return <p style={{ textAlign: "center" }}>Загрузка…</p>;
   }
 
-  const filteredMeals = meals.filter((meal) => meal.category === activeCategory);
+  const filteredMeals = meals.filter(
+    (meal) => meal.category === activeCategory
+  );
   const shownMeals = filteredMeals.slice(0, visibleCount);
   const hasMore = visibleCount < filteredMeals.length;
 
   const handleLoadMore = () => {
-    setVisibleCount((v) => Math.min(v + LOAD_MORE_STEP, filteredMeals.length));
+    setVisibleCount((v) =>
+      Math.min(v + LOAD_MORE_STEP, filteredMeals.length)
+    );
   };
 
   return (
-    <section className={s.menuBody}>
+    <section className={s.menu}>
       <div className="container">
         <MenuOptions
           activeCategory={activeCategory}
@@ -62,12 +66,17 @@ export default function MenuBody() {
 
         <MenuCatalog
           meals={shownMeals}
-          onAdd={(meal: Meal, qty: number) => console.log("ADD:", meal.title, qty)}
+          onAdd={(meal: Meal, qty: number) =>
+            console.log("ADD:", meal.title, qty)
+          }
         />
 
         {hasMore && (
           <div style={{ textAlign: "center", margin: "20px 0" }}>
-            <SeeMoreButton onClick={handleLoadMore} className="load-more-button" />
+            <SeeMoreButton
+              onClick={handleLoadMore}
+              className="load-more-button"
+            />
           </div>
         )}
       </div>

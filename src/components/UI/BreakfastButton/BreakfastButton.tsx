@@ -17,7 +17,9 @@ export default function BreakfastButton({
   className = "",
   ...props
 }: BreakfastButtonProps) {
-  const mergedClass = `${s.breakfast} ${isActive ? s.active : ""} ${className}`;
+  const mergedClass = `${s.menuCategoryButton} ${
+    isActive ? s.menuCategoryButtonActive : ""
+  } ${className}`;
 
   return (
     <Button {...props} icon={null} className={mergedClass}>

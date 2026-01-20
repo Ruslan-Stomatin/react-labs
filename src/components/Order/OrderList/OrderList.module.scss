@@ -1,15 +1,15 @@
 @use "@/styles" as s;
 
-.list {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    gap: 20px;
+.orderList {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 20px;
 }
 
-.empty {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.orderListEmpty {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }

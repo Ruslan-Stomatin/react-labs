@@ -15,15 +15,15 @@ export default function MenuOptions({
   onChangeCategory,
 }: MenuOptionsProps) {
   return (
-    <section className={s.options}>
-      <h1 className={s.title}>Browse our menu</h1>
-      <p className={s.text}>
+    <section className={s.menuOptions}>
+      <h1 className={s.menuOptionsTitle}>Browse our menu</h1>
+      <p className={s.menuOptionsText}>
         Use our menu to place an order online, or{" "}
-        <span className={s.phone}>phone</span> <br />
+        <span className={s.menuOptionsPhone}>phone</span> <br />
         our store to place a pickup order. Fast and fresh food.
       </p>
 
-      <div className={s.tabs}>
+      <div className={s.menuOptionsTabs}>
         <Dessert
           isActive={activeCategory === "Dessert"}
           onClick={() => onChangeCategory("Dessert")}

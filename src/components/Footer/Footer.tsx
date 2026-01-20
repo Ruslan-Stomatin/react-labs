@@ -7,24 +7,27 @@ import Logo from '@/components/Brand/Logo/Logo'
 import { footerCols } from '@/config/FooterNav'
 
 function Footer() {
-    return (
-       <footer className={s.footer}>
+  return (
+    <footer className={s.footer}>
+      <div
+        className={s.footerBg}
+        style={{ ['--footer-bg' as any]: `url(${BgrFooter})` }}
+      />
 
-      <div className={s.bg} style={{ ['--footer-bg' as any]: `url(${BgrFooter})` }} />
-
-    <div className="container">
-        <div className={s.top}>
-          <div className={s.brand}>
+      <div className="container">
+        <div className={s.footerTop}>
+          <div className={s.footerBrand}>
             <Logo />
-            <p className={s.desc}>
-              Takeaway & Delivery template<br/>for small – medium businesses.
+            <p className={s.footerDesc}>
+              Takeaway & Delivery template<br />
+              for small – medium businesses.
             </p>
           </div>
 
-          <div className={s.cols}>
+          <div className={s.footerCols}>
             {footerCols.map((col) => (
-              <div key={col.title} className={s.col}>
-                <h4 className={s.head}>{col.title}</h4>
+              <div key={col.title} className={s.footerCol}>
+                <h4 className={s.footerColTitle}>{col.title}</h4>
                 <nav>
                   {col.links.map((link) => (
                     <a key={link.to} href={link.to}>
@@ -37,13 +40,19 @@ function Footer() {
           </div>
         </div>
 
-        <div className={s.bottom}>
-          <p className={s.copy}>
-            Built by <a href="https://flowbase.co" target="_blank" rel="noreferrer">Flowbase</a> •
-            &nbsp;Powered by <a href="https://webflow.com" target="_blank" rel="noreferrer">Webflow</a>
+        <div className={s.footerBottom}>
+          <p className={s.footerCopy}>
+            Built by{' '}
+            <a href="https://flowbase.co" target="_blank" rel="noreferrer">
+              Flowbase
+            </a>{' '}
+            • Powered by{' '}
+            <a href="https://webflow.com" target="_blank" rel="noreferrer">
+              Webflow
+            </a>
           </p>
 
- <ul className={s.social}>
+          <ul className={s.footerSocial}>
             <li>
               <a href="https://www.instagram.com/">
                 <img src={Instagram} alt="Instagram" />
@@ -61,10 +70,9 @@ function Footer() {
             </li>
           </ul>
         </div>
-
-    </div>
+      </div>
     </footer>
-    )
+  )
 }
 
-export default Footer;
+export default Footer
