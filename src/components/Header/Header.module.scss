@@ -1,44 +1,43 @@
 @use "@/styles" as s;
 
-
 .header {
   padding-block: 16px;
+}
 
-  .row {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+.headerRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.headerMenu {
+  display: flex;
+  justify-content: end;
+  gap: 80px;
+}
+
+.headerNav {
+  display: flex;
+  font-size: s.$font-scale-medium;
+  gap: 20px;
+  padding-block: 14px;
+}
+
+.headerLink {
+  color: #28224b;
+  text-decoration: none;
+  transition: color 0.5s;
+
+  &:hover {
+    color: #28224b68;
+    cursor: pointer;
   }
+}
 
-  .header_menu {
-    display: flex;
-    justify-content: end;
-    gap: 80px;
-  }
+.headerLinkActive {
+  color: s.$text-color-main-highlight;
 
-  .navigation {
-    display: flex;
-    font-size: s.$font-scale-medium;
-    gap: 20px;
-    padding-block: 14px;
-
-    .link {
-      color: #28224b;
-      text-decoration: none;
-      transition: color 0.5s;
-
-      &:hover {
-        color: #28224b68;
-        cursor: pointer;
-      }
-
-      &.active {
-        color: s.$text-color-main-highlight;
-
-        &:hover {
-          color: #35b7be7a;
-        }
-      }
-    }
+  &:hover {
+    color: #35b7be7a;
   }
 }
