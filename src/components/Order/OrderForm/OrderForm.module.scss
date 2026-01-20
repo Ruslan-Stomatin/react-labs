@@ -8,14 +8,14 @@
   margin: 20px;
 }
 
-.label {
-  justify-self: end; 
+.orderFormLabel {
+  justify-self: end;
   font-size: s.$font-scale-large;
 }
 
-.input {
+.orderFormInput {
   width: 100%;
-  background-color: #FAFAFA;
+  background-color: #fafafa;
   height: 40px;
   padding: 0 14px;
   border: 1px solid #e5e5e5;
@@ -23,9 +23,9 @@
   outline: none;
 }
 
-.button {
-  grid-column: 2 / -1;  
-  justify-self: center; 
+.orderFormSubmit {
+  grid-column: 2 / -1;
+  justify-self: center;
   padding: 15px 44px;
   border: none;
   border-radius: 6px;
