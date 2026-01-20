@@ -1,18 +1,17 @@
 @use "@/styles" as s;
 
-.orderBody {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-
-    h1 {
-    display: flex;
-    justify-content: center;
-    color: s.$text-color-main-highlight;
-    margin: 30px 0;
-    font-size: s.$h1-size;
-    font-weight: s.$font-weight-regular;
-}
+.order {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
 
+.orderTitle {
+  display: flex;
+  justify-content: center;
+  color: s.$text-color-main-highlight;
+  margin: 30px 0;
+  font-size: s.$h1-size;
+  font-weight: s.$font-weight-regular;
+}
