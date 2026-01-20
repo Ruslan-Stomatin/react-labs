@@ -10,7 +10,7 @@ function Footer() {
     return (
        <footer className={s.footer}>
 
-      <div className={s.bg} style={{ ['--footer-bg']: `url(${BgrFooter})` }} />
+      <div className={s.bg} style={{ ['--footer-bg' as any]: `url(${BgrFooter})` }} />
 
     <div className="container">
         <div className={s.top}>

@@ -15,6 +15,7 @@ export default function CartButton() {
         <img src={CartIcon} alt="" className={s.cart} aria-hidden />
       </Button>
       </Link>
+
       <span className={s.badge} aria-live="polite">
         {count}
       </span>

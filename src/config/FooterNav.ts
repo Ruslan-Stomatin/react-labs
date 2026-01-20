@@ -1,4 +1,14 @@
-export const footerCols = [
+export type FooterLink = {
+  label: string;
+  to: string;
+};
+
+export type FooterColumn = {
+  title: string;
+  links: FooterLink[];
+};
+
+export const footerCols: FooterColumn[] = [
   {
     title: "Company",
     links: [
