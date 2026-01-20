@@ -4,12 +4,12 @@
   width: min(90%, 26.25rem);
   margin: 4rem auto;
   padding: 2rem 2.5rem;
-  background: s.$bagraund-main; 
+  background: s.$bagraund-main;
   border-radius: 0.5rem;
   box-shadow: 0 0.188rem 1.25rem rgba(0, 0, 0, 0.06);
 }
 
-.title {
+.loginFormTitle {
   text-align: center;
   font-size: s.$h3-size;
   font-weight: s.$font-weight-bold;
@@ -17,11 +17,11 @@
   color: s.$text-color-main-highlight;
 }
 
-.field {
+.loginFormField {
   margin-bottom: 1.4rem;
 }
 
-.label {
+.loginFormLabel {
   display: block;
   font-size: s.$font-size-base;
   font-weight: s.$font-weight-medium;
@@ -29,7 +29,7 @@
   color: s.$descriptive-text-color;
 }
 
-.input {
+.loginFormInput {
   width: 100%;
   padding: 0.625rem 0.75rem;
   border: 1px solid #cfd8dc;
@@ -43,7 +43,7 @@
   }
 }
 
-.actions {
+.loginFormActions {
   display: flex;
   gap: 1rem;
   justify-content: center;
@@ -60,8 +60,7 @@
   transition: 0.2s ease;
 }
 
-
-.btnPrimary {
+.loginFormSubmit {
   padding: 0.6rem 1.4rem;
   border-radius: 0.375rem;
   border: none;
@@ -78,7 +77,7 @@
   }
 }
 
-.btnSecondary {
+.loginFormCancel {
   padding: 0.6rem 1.4rem;
   border-radius: 0.375rem;
   border: none;
