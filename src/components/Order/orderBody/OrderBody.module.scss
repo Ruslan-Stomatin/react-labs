@@ -1,17 +1,28 @@
 @use "@/styles" as s;
 
+.orderPage {
+  min-height: 100vh;
+  position: relative;
+  overflow: hidden;
+  background: var(--bg-main);
+  z-index: 0;
+
+  @include s.slanted-surface;
+  --sl-bg: var(--hero-surface);
+}
+
 .order {
   display: flex;
-  justify-content: center;
-  align-items: center;
   flex-direction: column;
+  align-items: center;
+  padding: 6rem 0 4rem;
+  position: relative;
+  z-index: 1;
 }
 
 .orderTitle {
-  display: flex;
-  justify-content: center;
-  color: s.$text-color-main-highlight;
-  margin: 30px 0;
+  margin: 30px 30px;
   font-size: s.$h1-size;
   font-weight: s.$font-weight-regular;
+  color: s.$text-color-main-highlight;
 }

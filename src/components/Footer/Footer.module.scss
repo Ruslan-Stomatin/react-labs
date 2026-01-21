@@ -3,9 +3,7 @@
 .footer {
   position: relative;
   padding: 78px 0 68px;
-  background: s.$bagraund-second;
-  overflow: hidden;
-  isolation: isolate;
+  background: var(--hero-surface);
 }
 
 .footerBg {
@@ -34,7 +32,7 @@
 }
 
 .footerDesc {
-  color: s.$descriptive-text-color;
+  color: var(--link-color);
   line-height: s.$line-height-medium;
   max-width: 28ch;
   font-size: s.$font-scale-defult;
@@ -60,7 +58,7 @@
   }
 
   a {
-    color: s.$descriptive-text-color;
+    color: var(--link-color);
     text-decoration: none;
     font-size: s.$font-scale-medium;
     line-height: 1.7;
@@ -68,7 +66,7 @@
     font-weight: s.$font-weight-regular;
 
     &:hover {
-      color: #5462859d;
+      color: var(--link-color-after);
     }
   }
 }
@@ -103,7 +101,7 @@
 }
 
 .footerCopy {
-  color: #353448;
+  color: var(--link-color);
   font-size: s.$font-scale-medium;
 
   a {
@@ -128,7 +126,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    background: s.$bagraund-second;
+    background: var(--social-btns);
     border: 1.5px solid #00000014;
     text-decoration: none;
     transition: all 0.25s ease;
@@ -142,7 +140,7 @@
 
     &:hover {
       transform: translateY(-3px);
-      box-shadow: 0 6px 20px #0000001a;
+      box-shadow: 0 6px 20px var(--shadow-card);
 
       img {
         opacity: 1;

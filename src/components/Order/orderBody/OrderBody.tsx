@@ -5,6 +5,7 @@ import s from "./OrderBody.module.scss";
 
 function OrderBody() {
   return (
+    <section className={s.orderPage}>
     <section className={s.order}>
       <div className="container">
         <h1 className={s.orderTitle}>Finish your order</h1>
@@ -13,6 +14,7 @@ function OrderBody() {
         <OrderSummary />
         <OrderForm />
       </div>
+    </section>
     </section>
   );
 }

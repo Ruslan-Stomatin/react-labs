@@ -5,6 +5,7 @@ import type { Meal } from "@/utils/mapMeal";
 import MenuCatalog from "@/components/Menu/MenuCatalog/MenuCatalog";
 import MenuOptions from "../MenuOptions/MenuOptions";
 import SeeMoreButton from "../../UI/SeeMoreButton/SeeMoreButton";
+import MenuCard from "../MenuCard/MenuCard";
 import s from "./MenuBody.module.scss";
 
 const INITIAL_LIMIT = 6;
@@ -78,6 +79,8 @@ export default function MenuBody() {
               className="load-more-button"
             />
           </div>
+
+          
         )}
       </div>
     </section>

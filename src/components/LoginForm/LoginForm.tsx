@@ -23,6 +23,7 @@ export default function LoginForm({ onLogin }: LoginFormProps) {
   }
 
   return (
+    <section className={s.loginBackground}>
     <form className={s.loginForm} onSubmit={handleSubmit}>
       <h2 className={s.loginFormTitle}>Log in</h2>
 
@@ -60,5 +61,6 @@ export default function LoginForm({ onLogin }: LoginFormProps) {
         </button>
       </div>
     </form>
+    </section>
   );
 }

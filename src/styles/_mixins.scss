@@ -1,0 +1,23 @@
+@mixin slanted-surface(
+  $pseudo: before,
+  $height: 110%,
+  $z: 0
+) {
+  position: relative;
+
+  &::#{$pseudo} {
+    content: "";
+    position: absolute;
+    inset: 0 0 auto 0;
+    height: var(--sl-height, #{$height});
+    background: var(--sl-bg, transparent);
+    pointer-events: none;
+    z-index: -1;
+    clip-path: polygon(
+      0 var(--sl-cut-left, 8%),
+      100% var(--sl-cut-right, 0),
+      100% 100%,
+      0 100%
+    );
+  }
+}
