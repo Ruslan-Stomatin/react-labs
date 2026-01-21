@@ -5,22 +5,12 @@
   z-index: 0;
 }
 
-.menu::before {
-  content: "";
-  position: absolute;
-  inset: 0 0 auto 0;
-  height: 110%;
-  background: s.$bagraund-second;
-  pointer-events: none;
-  z-index: -1;
+.menu {
+  @include s.slanted-surface;
 
-  clip-path: polygon(
-    0 8%,
-    100% 0,
-    100% 100%,
-    0 100%
-  );
+  --sl-bg: var(--hero-surface);
 }
+
 
 .menu > .container {
   position: relative;

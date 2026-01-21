@@ -6,9 +6,9 @@
   justify-content: space-between;
   align-items: center;
   flex-direction: row;
-  background-color: s.$bagraund-main;
+  background-color: var(--bg-main);
   border-radius: 6px;
-  box-shadow: 0 8px 24px #0000002e;
+  box-shadow: 0 8px 24px var(--shadow-card);
   padding: 14px;
 }
 

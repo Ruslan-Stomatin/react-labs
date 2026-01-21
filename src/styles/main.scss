@@ -1,9 +1,39 @@
 @use "./index" as s;
 
+html {
+  --hero-surface: var(--bg-second);
+  --buttons-default: var(--btn-default);
+  --bg-main: var(--bg-main);
+  --shadow-card: #0000002e;
+  --bg-second: #f5fbfc;
+  --text-main: var(--text-main);
+  --text-second: #546285;
+  --link-color:  #28224b;
+  --link-color-after: #28224b68;
+  --hr-footer: #7E828F17;
+  --social-btns: #f5fbfc;
+  --accent: #35b8be;
+}
+
+html[data-theme="dark"] {
+  --buttons-default: #0606068c;
+  --hero-surface: #181e28;
+  --shadow-card: #35b7be8d;
+  --bg-main: #0f1115;
+  --bg-second: #151a24;
+  --text-main: #f5f5f5;
+  --text-second: #d8d8d8fa;
+  --link-color:  #959595;
+  --link-color-after: #736e6e8f;
+  --hr-footer: #bfbfbf17;
+  --social-btns: #c8eeed;
+  --accent: #35b8be;
+}
+
 html, body, #root {
   height: 100%;
-  background: s.$bagraund-main; 
-  font-size: s.$font-size-base;
+  background: var(--bg-main);
+  color: var(--text-main);
 }
 
 

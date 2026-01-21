@@ -2,13 +2,21 @@ import { NavLink } from "react-router-dom";
 import s from "./Header.module.scss";
 import Logo from "../Brand/Logo/Logo";
 import CartButton from "../Cart/CartButton";
+import { useTheme } from "@/hooks/useTheme";
+import Button from "../UI/Button/Button";
 
 function Header() {
+
+  
+const { theme, toggleTheme } = useTheme();
+
   return (
     <header className={s.header}>
       <div className="container">
         <div className={s.headerRow}>
           <Logo />
+
+  
 
           <div className={s.headerMenu}>
             <nav className={s.headerNav}>
@@ -48,6 +56,13 @@ function Header() {
                 Login
               </NavLink>
             </nav>
+
+            <button onClick={toggleTheme} className={s.headerThemeBtn}>
+            <span className={s.label}>
+              {theme === "dark" ? "☾" : "☀"}
+            </span>
+            </button>
+
 
             <CartButton />
           </div>

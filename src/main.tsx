@@ -12,6 +12,7 @@ import { AuthProvider } from "./auth/AuthContext";
 
 import { Provider } from "react-redux";
 import { store } from "@/store/store";
+import { ThemeProvider } from "@/config/ThemeContext";
 
 import "./styles/main.scss";
 
@@ -23,6 +24,7 @@ if (!rootEl) {
 createRoot(rootEl).render(
   <StrictMode>
     <Provider store={store}>
+      <ThemeProvider>
       <BrowserRouter>
         <AuthProvider>
           <Routes>
@@ -40,6 +42,7 @@ createRoot(rootEl).render(
           </Routes>
         </AuthProvider>
       </BrowserRouter>
+      </ThemeProvider>
     </Provider>
   </StrictMode>
 );

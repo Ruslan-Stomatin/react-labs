@@ -13,7 +13,7 @@
 .headerMenu {
   display: flex;
   justify-content: end;
-  gap: 80px;
+  gap: 10px;
 }
 
 .headerNav {
@@ -21,15 +21,16 @@
   font-size: s.$font-scale-medium;
   gap: 20px;
   padding-block: 14px;
+  padding: 20px;
 }
 
 .headerLink {
-  color: #28224b;
+  color: var(--link-color);
   text-decoration: none;
   transition: color 0.5s;
 
   &:hover {
-    color: #28224b68;
+    color: var(--link-color-after);
     cursor: pointer;
   }
 }
@@ -41,3 +42,24 @@
     color: #35b7be7a;
   }
 }
+
+.headerThemeBtn {
+  color: white;
+  width: auto;
+  background: var(--accent);
+  border-radius: 4px;
+  border-color: var(--accent);
+  width: 55px;
+  height: 55px;
+  font-size: 25px;
+
+  &:hover {
+  filter: var(--icon-hover-filter, hue-rotate(2deg) saturate(1.2) brightness(1.1));
+  cursor: pointer;
+  }
+}
+
+.label {
+  mix-blend-mode: lighten;
+}
+

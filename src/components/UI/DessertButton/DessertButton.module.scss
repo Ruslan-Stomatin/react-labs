@@ -10,10 +10,11 @@
   font-weight: s.$font-weight-regular;
   line-height: 1;
   transition: border-color 0.15s ease, box-shadow 0.15s ease, background 0.15s ease;
-  background-color: s.$bagraund-main;
-  color: #000;
+  background: var(--btn-default);
+  color: var(--text-main);
 
   &:hover {
+    border-color: s.$text-color-main-highlight;
     outline: none;
   }
 }

@@ -5,11 +5,13 @@
   padding: 12px 10px;
   border: 1px solid #ccc;
   border-radius: 6px;
+  background: var(--bg-second);
+  color: var(--text-main);
   font-size: s.$font-scale-defult;
   outline: none;
   min-width: 0;
 }
 
-.uiInput:focus {
-  border-color: #888;
+.uiInput:hover {
+  border-color: var(--accent);
 }
