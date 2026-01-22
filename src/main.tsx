@@ -13,6 +13,7 @@ import { AuthProvider } from "./auth/AuthContext";
 import { Provider } from "react-redux";
 import { store } from "@/store/store";
 import { ThemeProvider } from "@/config/ThemeContext";
+import { LangProvider } from "@/config/LangContext"
 
 import "./styles/main.scss";
 
@@ -25,6 +26,7 @@ createRoot(rootEl).render(
   <StrictMode>
     <Provider store={store}>
       <ThemeProvider>
+        <LangProvider>
       <BrowserRouter>
         <AuthProvider>
           <Routes>
@@ -42,6 +44,7 @@ createRoot(rootEl).render(
           </Routes>
         </AuthProvider>
       </BrowserRouter>
+      </LangProvider>
       </ThemeProvider>
     </Provider>
   </StrictMode>

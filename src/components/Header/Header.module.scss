@@ -63,3 +63,13 @@
   mix-blend-mode: lighten;
 }
 
+.headerLangBtn {
+  color: var(--text-main);
+  width: auto;
+  background: var(--bg-second);
+  border-radius: 4px;
+  border-color: var(--accent);
+  width: 55px;
+  height: 55px;
+  font-size: 15px;
+}

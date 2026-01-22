@@ -4,12 +4,12 @@ import Logo from "../Brand/Logo/Logo";
 import CartButton from "../Cart/CartButton";
 
 import { useTheme } from "@/hooks/useTheme";
-import Button from "../UI/Button/Button";
+import { useLang } from "@/hooks/useLang";
+import { t } from "@/config/translations";
 
 function Header() {
-
-  
-const { theme, toggleTheme } = useTheme();
+  const { theme, toggleTheme } = useTheme();
+  const { lang, setLang } = useLang();
 
   return (
     <header className={s.header}>
@@ -25,7 +25,7 @@ const { theme, toggleTheme } = useTheme();
                   `${s.headerLink} ${isActive ? s.headerLinkActive : ""}`
                 }
               >
-                Home
+                {t(lang, "navHome")}
               </NavLink>
 
               <NavLink
@@ -34,7 +34,7 @@ const { theme, toggleTheme } = useTheme();
                   `${s.headerLink} ${isActive ? s.headerLinkActive : ""}`
                 }
               >
-                Menu
+                {t(lang, "navMenu")}
               </NavLink>
 
               <NavLink
@@ -43,7 +43,7 @@ const { theme, toggleTheme } = useTheme();
                   `${s.headerLink} ${isActive ? s.headerLinkActive : ""}`
                 }
               >
-                Company
+                {t(lang, "navCompany")}
               </NavLink>
 
               <NavLink
@@ -52,14 +52,22 @@ const { theme, toggleTheme } = useTheme();
                   `${s.headerLink} ${isActive ? s.headerLinkActive : ""}`
                 }
               >
-                Login
+                {t(lang, "navLogin")}
               </NavLink>
             </nav>
 
+            <select className={s.headerLangBtn}
+              value={lang}
+              onChange={(e) => setLang(e.target.value as any)}
+              aria-label="Language"
+            >
+              <option value="en">EN</option>
+              <option value="ru">RU</option>
+              <option value="lt">LT</option>
+            </select>
+
             <button onClick={toggleTheme} className={s.headerThemeBtn}>
-            <span className={s.label}>
-              {theme === "dark" ? "☾" : "☀"}
-            </span>
+              <span className={s.label}>{theme === "dark" ? "☾" : "☀"}</span>
             </button>
 
             <CartButton />
