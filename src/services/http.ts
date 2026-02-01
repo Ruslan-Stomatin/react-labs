@@ -44,7 +44,6 @@ type FetchJsonOptions = {
   body?: unknown;
   headers?: Record<string, string>;
   timeout?: number;
-  retries?: number;
   signal?: AbortSignal;
 };
 
@@ -66,13 +65,11 @@ export async function fetchJson<T = unknown>(
     body,
     headers,
     timeout = 10000,
-    retries = 0,
     signal,
   }: FetchJsonOptions = {}
 ): Promise<T> {
   const url = /^https?:\/\//i.test(path) ? path : buildUrl(path, params);
 
-  console.log("[HTTP] ->", method, url);
 
   let attempt = 0;
 
@@ -119,8 +116,8 @@ export async function fetchJson<T = unknown>(
       clearTimeout(timer);
 
       const isAbort = err instanceof Error && err.name === "AbortError";
-      const canRetry = !isAbort && isNetworkFailure(err) && attempt < retries;
 
+      const canRetry = !isAbort && isNetworkFailure(err) && attempt < 0; 
       if (canRetry) {
         attempt += 1;
         continue;
