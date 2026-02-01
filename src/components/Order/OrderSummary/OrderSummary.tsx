@@ -1,10 +1,9 @@
 import { useSelector } from "react-redux";
-import type { RootState } from "@/store/store";
 import { selectCartTotal } from "@/store/cart/cartSlice";
 import s from "@/components/Order/OrderSummary/OrderSummary.module.scss";
 
 export default function OrderSummary() {
-  const total = useSelector((state: RootState) => selectCartTotal(state));
+  const total = useSelector(selectCartTotal);
 
   return (
     <h3 className={s.orderSummaryTotal}>

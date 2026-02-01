@@ -1,9 +1,8 @@
 import logoSrc from '@/assets/icons/logo_app.svg'
-import s from './Logo.module.scss'
 
 function Logo() {
     return (
-        <a href='/' className={s.logo}>
+        <a href='/'>
         <img src={logoSrc} alt='Company Logo'></img>
         </a>
     )

@@ -1,4 +1,4 @@
-import { createContext, useEffect, useState } from "react";
+import { createContext, useEffect, useState, type ReactNode} from "react";
 
 export type Theme = "light" | "dark";
 
@@ -7,7 +7,7 @@ type ThemeContextValue = {
   toggleTheme: () => void;
 };
 
-export const ThemeContext = createContext<ThemeContextValue | null>(null);
+export const ThemeContext = createContext<ThemeContextValue | undefined>(undefined);
 
 function getSystemTheme(): Theme {
   return window.matchMedia("(prefers-color-scheme: dark)").matches
@@ -15,7 +15,7 @@ function getSystemTheme(): Theme {
     : "light";
 }
 
-export function ThemeProvider({ children }: { children: React.ReactNode }) {
+export function ThemeProvider({ children }: { children: ReactNode }) {
   const [theme, setTheme] = useState<Theme>(() => {
     const saved = localStorage.getItem("theme");
     return saved === "light" || saved === "dark"

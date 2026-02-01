@@ -1,4 +1,4 @@
-import { createContext, useEffect, useState } from "react";
+import { createContext, useEffect, useState, type ReactNode } from "react";
 
 export type Lang = "en" | "ru" | "lt";
 
@@ -7,11 +7,11 @@ type LangContextValue = {
   setLang: (lang: Lang) => void;
 };
 
-export const LangContext = createContext<LangContextValue | null>(null);
+export const LangContext = createContext<LangContextValue | undefined>(undefined);
 
 const STORAGE_KEY = "lang";
 
-export function LangProvider({ children }: { children: React.ReactNode }) {
+export function LangProvider({ children }: { children: ReactNode }) {
   const [lang, setLangState] = useState<Lang>(() => {
     const saved = localStorage.getItem(STORAGE_KEY);
     return saved === "ru" || saved === "lt" || saved === "en" ? saved : "en";
