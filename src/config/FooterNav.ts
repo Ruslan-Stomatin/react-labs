@@ -1,34 +1,36 @@
+import type { TranslationKey } from "@/config/translations";
+
 export type FooterLink = {
-  label: string;
+  labelKey: TranslationKey;
   to: string;
 };
 
 export type FooterColumn = {
-  title: string;
+  titleKey: TranslationKey;
   links: FooterLink[];
 };
 
 export const footerCols: FooterColumn[] = [
   {
-    title: "Company",
+    titleKey: "footerCompany",
     links: [
-      { label: "Home", to: "/" },
-      { label: "Order", to: "/order" },
-      { label: "FAQ", to: "/faq" },
-      { label: "Contact", to: "/contact" },
+      { labelKey: "footerHome", to: "/" },
+      { labelKey: "footerOrder", to: "/order" },
+      { labelKey: "footerFaq", to: "/faq" },
+      { labelKey: "footerContact", to: "/contact" },
     ],
   },
   {
-    title: "Template",
+    titleKey: "footerTemplate",
     links: [
-      { label: "Style Guide", to: "/style-guide" },
-      { label: "Changelog", to: "/changelog" },
-      { label: "Licence", to: "/licence" },
-      { label: "Webflow University", to: "/webflow-university" },
+      { labelKey: "footerStyleGuide", to: "/style-guide" },
+      { labelKey: "footerChangelog", to: "/changelog" },
+      { labelKey: "footerLicence", to: "/licence" },
+      { labelKey: "footerWebflowUniversity", to: "/webflow-university" },
     ],
   },
   {
-    title: "Flowbase",
-    links: [{ label: "More Cloneables", to: "/cloneables" }],
+    titleKey: "footerFlowbase",
+    links: [{ labelKey: "footerMoreCloneables", to: "/cloneables" }],
   },
 ];

@@ -1,17 +1,22 @@
-import s from './Footer.module.scss'
-import BgrFooter from '@/assets/images/Delivery_footer.png'
-import Instagram from '@/assets/icons/Instagram.svg'
-import YouTube from '@/assets/icons/YouTube.svg'
-import Twitter from '@/assets/icons/Twitter.svg'
-import Logo from '@/components/Brand/Logo/Logo'
-import { footerCols } from '@/config/FooterNav'
+import s from "./Footer.module.scss";
+import BgrFooter from "@/assets/images/Delivery_footer.png";
+import Instagram from "@/assets/icons/Instagram.svg";
+import YouTube from "@/assets/icons/YouTube.svg";
+import Twitter from "@/assets/icons/Twitter.svg";
+import Logo from "@/components/Brand/Logo/Logo";
+import { footerCols } from "@/config/FooterNav";
+
+import { useLang } from "@/hooks/useLang";
+import { t } from "@/config/translations";
 
 function Footer() {
+  const { lang } = useLang();
+
   return (
     <footer className={s.footer}>
       <div
         className={s.footerBg}
-        style={{ ['--footer-bg' as any]: `url(${BgrFooter})` }}
+        style={{ ["--footer-bg" as any]: `url(${BgrFooter})` }}
       />
 
       <div className="container">
@@ -19,19 +24,20 @@ function Footer() {
           <div className={s.footerBrand}>
             <Logo />
             <p className={s.footerDesc}>
-              Takeaway & Delivery template<br />
-              for small – medium businesses.
+              {t(lang, "footerDescLine1")}
+              <br />
+              {t(lang, "footerDescLine2")}
             </p>
           </div>
 
           <div className={s.footerCols}>
             {footerCols.map((col) => (
-              <div key={col.title} className={s.footerCol}>
-                <h4 className={s.footerColTitle}>{col.title}</h4>
+              <div key={col.titleKey} className={s.footerCol}>
+                <h4 className={s.footerColTitle}>{t(lang, col.titleKey)}</h4>
                 <nav>
                   {col.links.map((link) => (
                     <a key={link.to} href={link.to}>
-                      {link.label}
+                      {t(lang, link.labelKey)}
                     </a>
                   ))}
                 </nav>
@@ -42,11 +48,11 @@ function Footer() {
 
         <div className={s.footerBottom}>
           <p className={s.footerCopy}>
-            Built by{' '}
+            Built by{" "}
             <a href="https://flowbase.co" target="_blank" rel="noreferrer">
               Flowbase
-            </a>{' '}
-            • Powered by{' '}
+            </a>{" "}
+            • Powered by{" "}
             <a href="https://webflow.com" target="_blank" rel="noreferrer">
               Webflow
             </a>
@@ -72,7 +78,7 @@ function Footer() {
         </div>
       </div>
     </footer>
-  )
+  );
 }
 
-export default Footer
+export default Footer;
